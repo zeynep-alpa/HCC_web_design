@@ -6,7 +6,7 @@ const TahminSonuc = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const hasta = queryParams.get("hasta") || "Bilinmiyor";
-  const risk = queryParams.get("risk") || "%87 - Yüksek Risk";
+  const risk = queryParams.get("risk") || " Yüksek Risk";
 
   const llmYanit = `
     Model, AFP ve GGT seviyelerinin normalin üstünde olması ve yaş/gender gibi klinik verileri göz önüne alarak HCC riskini yüksek olarak değerlendirmiştir.

@@ -7,6 +7,7 @@ import "./InputPage.css";
 const InputPage = () => {
   const [form, setForm] = useState({
     name: "",
+    surname: "",
     age: "",
     gender: "",
     alcohol: "",
@@ -95,9 +96,45 @@ const InputPage = () => {
             />
           </div>
         </div>
+      </div>
 
-        {/* SAĞ */}
-        <div className="right-section">
+      {/* BT YÜKLEME ve LAB SONUÇLARI - YAN YANA */}
+      <div
+        className="bt-lab-container"
+        style={{ display: "flex", gap: "40px", marginTop: "40px" }}
+      >
+        {/* BT YÜKLEME ALANI */}
+        <div className="bt-section" style={{ flex: 1 }}>
+          <h3>Bilgisayarlı Tomografi (BT) Yükleme</h3>
+          <label
+            htmlFor="file-upload"
+            className="upload-area"
+            style={{ cursor: "pointer" }}
+          >
+            {image ? (
+              <img
+                src={image}
+                alt="BT Görüntüsü"
+                style={{ maxWidth: "100%", borderRadius: "12px" }}
+              />
+            ) : (
+              <div>
+                <strong>BT Görüntüsü Yükle</strong>
+                <small>Görüntüyü buraya sürükleyip bırakın veya gözatın</small>
+              </div>
+            )}
+          </label>
+          <input
+            type="file"
+            id="file-upload"
+            accept="image/*"
+            onChange={handleFileChange}
+            style={{ display: "none" }}
+          />
+        </div>
+
+        {/* LABORATUVAR SONUÇLARI */}
+        <div className="right-section" style={{ flex: 1 }}>
           <h3>Laboratuvar Sonuçları</h3>
           <div className="lab-grid">
             {[
@@ -124,24 +161,7 @@ const InputPage = () => {
         </div>
       </div>
 
-      {/* ALT - BT YÜKLEME */}
-      <div className="bt-section">
-        <h3>Bilgisayarlı Tomografi (BT) Yükleme</h3>
-        <label htmlFor="file-upload" className="upload-area">
-          <div>
-            <strong>BT Görüntüsü Yükle</strong>
-            <small>Görüntüyü buraya sürükleyip bırakın veya gözatın</small>
-          </div>
-        </label>
-        <input
-          type="file"
-          id="file-upload"
-          accept="image/*"
-          onChange={handleFileChange}
-        />
-      </div>
-
-      <div className="button-container">
+      <div className="button-container" style={{ marginTop: "30px" }}>
         <button className="calculate-btn" onClick={handleCalculate}>
           Hesapla
         </button>
