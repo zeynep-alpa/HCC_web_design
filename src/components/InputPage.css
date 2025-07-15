@@ -5,14 +5,15 @@
   margin: 30px auto;
   padding: 40px;
   font-family: "Segoe UI", sans-serif;
-  background-color: #f9fafb;
+  background-color: #f6fafe; /* sayfanın arka planı*/
   border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .input-page h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #111827;
+  color: #000000;/* EN ÜSTTEKİ "Hasta Bilgileri ve Laboratuvar Verileri" BAŞLIĞIN RENGİ */
   margin-bottom: 40px;
 }
 
@@ -34,29 +35,29 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #111827;
+  color:  #1e293b; /* Mavi ton */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
 }
 
 .form-group label {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-weight: 600;
   font-size: 14px;
-  color: #111827;
+  color: #111827;/* FORM ÜZERİNDEKİ LABEL YAZILARI (örn: Hasta Yaşı, Cinsiyet) */
 }
 
 .form-group input {
-  padding: 10px 14px;
-  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;/* İNPUT KUTUSUNUN KENAR ÇİZGİSİ */
   border-radius: 8px;
-  background-color: #f3f4f6;
-  font-size: 14px;
-  color: #111827;
+  background-color: #ffffff;/* İNPUT KUTULARININ ARKA PLANI */
+  font-size: 13px;
+  color: #111827;/* İNPUT İÇİNDEKİ YAZI RENGİ */
 }
 
 .lab-grid {
@@ -71,56 +72,79 @@
 }
 
 .lab-item label {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-weight: 600;
   font-size: 14px;
-  color: #111827;
+  color: #111827;/* LABORATUVAR KUTULARININ LABEL RENGİ */
 }
 
 .lab-item input {
-  padding: 10px 14px;
+  padding: 8px 10px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
-  background-color: #f3f4f6;
-  font-size: 14px;
-  color: #111827;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #111827;/* LABORATUVAR INPUT YAZI RENGİ */
 }
 
 .bt-section {
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #d6e4f4;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+.upload-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.upload-block {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .upload-area {
-  border: 2px dashed #cbd5e1;
-  background-color: #f8fafc;
+  border: 2px dashed #edf0f4;/* BT / ULTRASON ALANININ KENAR ÇİZGİSİ */
+  background-color: #ffffff;/* BT / ULTRASON ALANININ ARKA PLANI */
   padding: 40px;
   text-align: center;
   border-radius: 12px;
   cursor: pointer;
-  margin-top: 16px;
+  margin-top: 8px;
   display: block;
+  transition: 0.3s;
 }
 
 .upload-area:hover {
-  background-color: #f1f5f9;
+  background-color: #e0f2fe;/* BT / ULTRASON ALANINA HOVER (ÜZERİNE GELİNİNCE) RENGİ */
 }
 
 .upload-area div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .upload-area strong {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: #111827;
+  color: #1e3a8a;/* "BT Görüntüsü Yükle" GİBİ KALIN YAZILARIN RENGİ */
 }
 
 .upload-area small {
-  font-size: 12px;
-  color: #6b7280;
+  font-size: 11px;
+  color: #8e97a7; /* BT / ULTRASON ALANINDAKİ AÇIKLAMA YAZISI (gri) */
 }
 
 input[type="file"] {
@@ -130,23 +154,26 @@ input[type="file"] {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .calculate-btn {
-  padding: 10px 20px;
-  background-color: #2563eb;
-  color: #ffffff;
+  padding: 12px 28px;
+  background-color: #0046dd;/* HESAPLA BUTONUNUN ARKA PLANI */
+  color: #ffffff;/* HESAPLA BUTONU YAZI RENGİ */
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 9999px;
   font-weight: 600;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .calculate-btn:hover {
-  background-color: #1e40af;
+  background-color: #1e40af;/* HESAPLA BUTONUNA HOVER OLUNDUĞUNDAKİ RENK */
+  transform: scale(1.05);
 }
+
 .bt-lab-header {
   margin-top: 0;
 }
